@@ -1,0 +1,16 @@
+Pseudocode Development - Task: Write a detailed pseudocode for a simple program that takes a number as input, calculates the square if it's even or the cube if it's odd, and then outputs the result. Incorporate conditional and looping constructs
+
+
+Prompt user to input a number
+Display "Enter a number: "
+Input number
+Check if the number is even or odd
+if number % 2 == 0 then
+Calculate square if even
+result = number * number
+else
+Calculate cube if odd
+result = number * number * number
+endif
+Display the result
+Display "Result: " + result
