@@ -1,0 +1,41 @@
+Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort algorithm. Provide a brief explanation of how the algorithm works and a simple array of integers to demonstrate a dry run of your algorithm.
+
+
+Start 
+A: list of sortable items
+Get the length of the array
+n = length(A)
+Iterate through the array
+for i from 0 to n-1 do:
+Iterate through the unsorted part of the array
+for j from 0 to n-i-1 do:
+Compare adjacent elements
+if A[j] > A[j+1] then:
+Swap the elements if they are in the wrong order
+temp = A[j]
+A[j] = A[j+1]
+A[j+1] = temp
+end if
+end for
+end for
+End 
+
+[5,3,8,4,2]	
+Initial Array:[5,3,8,4,2]
+Comparing 5 and 3, swapping since5>3
+5>3: [3,5,8,4,2]
+Compare 5 and 8, no swap: [3, 5, 8, 4, 2]
+Compare 8 and 4, swap since 8 > 4: [3, 5, 4, 8, 2]
+Compare 8 and 2, swap since 8 > 2: [3, 5, 4, 2, 8]
+Pass 2:
+Compare 3 and 5, no swap: [3, 5, 4, 2, 8]
+Compare 5 and 4, swap since 5 > 4: [3, 4, 5, 2, 8]
+Compare 5 and 2, swap since 5 > 2: [3, 4, 2, 5, 8]
+Pass 3:
+Compare 3 and 4, no swap: [3, 4, 2, 5, 8]
+Compare 4 and 2, swap since 4 > 2: [3, 2, 4, 5, 8]
+Pass 4:
+Compare 3 and 2, swap since 3 > 2: [2, 3, 4, 5, 8]
+Sorted Array: [2, 3, 4, 5, 8]
+  
+
