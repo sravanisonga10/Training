@@ -1,0 +1,18 @@
+Recursive Function and Efficiency Analysis - Write a recursive function pseudocode and calculate the nth Fibonacci number and use Big O notation to analyze its efficiency. Compare this with an iterative approach and discuss the pros and cons in terms of space and time complexity.
+
+function fibonacciRecursive(n):
+if n <= 1 then:
+return n
+else:
+return fibonacciRecursive(n-1) + fibonacciRecursive(n-2)
+
+
+function fibonacciIterative(n):
+if n <= 1 then:
+return n
+else:
+fib = [0, 1]
+for i from 2 to n do:
+fib[i] = fib[i-1] + fib[i-2]
+return fib[n]
+
