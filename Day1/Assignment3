@@ -1,0 +1,29 @@
+ Function Design and Modularization - Create a document that describes the design of two modular functions: one that returns the factorial of a number, and another that calculates the nth Fibonacci number. Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+
+function factorial(number)
+if number equals 0 or 1 then
+return 1
+else
+factorial_value = 1
+for i from 2 to number do
+factorial_value = factorial_value * i
+end for
+return factorial_value
+end if
+end function
+
+
+
+function fibonacci(n)
+if n equals 0 then
+return 0
+else if n equals 1 then
+return 1
+else
+fib = [0, 1]
+for i from 2 to n do
+fib[i] = fib[i-1] + fib[i-2]
+end for
+return fib[n]
+end if
+end function
