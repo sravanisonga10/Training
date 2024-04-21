@@ -1,0 +1,45 @@
+Create a package com.math.operations and include classes for various arithmetic operations. Demonstrate how to compile and run these using the classpath.
+
+Add.java
+
+package com.math.operations;
+
+public class Add {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+
+Sub.java
+
+package com.math.operations;
+
+public class Subtract {
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+}
+
+Multiply.java
+
+package com.math.operations;
+
+public class Multiply {
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+Divide.java
+
+package com.math.operations;
+
+public class Divide {
+    public static int divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
+        return a / b;
+    }
+}
+
