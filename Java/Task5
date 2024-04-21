@@ -1,0 +1,35 @@
+a) Given an array of integers, write a program that finds if there are two numbers that add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Optimize the solution for time complexity.
+
+import java.util.HashSet;
+
+public class TwoSum {
+    public static void main(String[] args) {
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+
+        int[] result = findTwoSum(nums, target);
+        if (result != null) {
+            System.out.println("Indices of the two numbers: " + result[0] + ", " + result[1]);
+        } else {
+            System.out.println("No two numbers found that add up to the target.");
+        }
+    }
+
+    public static int[] findTwoSum(int[] nums, int target) {
+        HashSet<Integer> set = new HashSet<>();
+        
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (set.contains(complement)) {
+                for (int j = 0; j < nums.length; j++) {
+                    if (nums[j] == complement && i != j) {
+                        return new int[]{i, j};
+                    }
+                }
+            }
+            set.add(nums[i]);
+        }
+        
+        return null; 
+    }
+}
