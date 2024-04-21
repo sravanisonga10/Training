@@ -1,0 +1,21 @@
+a) Write a recursive function named SumArray that calculates and returns the sum of elements in an array, demonstarte with example
+
+
+public class SumArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int sum = sumArray(array);
+        System.out.println("Sum of elements in the array: " + sum);
+    }
+
+    public static int sumArray(int[] array) {
+        return sumArrayHelper(array, 0);
+    }
+
+    private static int sumArrayHelper(int[] array, int index) {
+        if (index >= array.length) {
+            return 0;
+        }
+        return array[index] + sumArrayHelper(array, index + 1);
+    }
+}
